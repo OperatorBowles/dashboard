@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <h1>Current Health Profile</h1>
+    <form>
+        <label>Goal</label>
+        <input name="goal" type='text' placeholder='Bulking'>
+        <label>Activity</label>
+        <input name="activity" type="text" placeholder="Lightly Active">
+        <button type="submit" href="/goals">Submit</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block body %}
+
+    <form action="/register" method="post">
+        <input name="first_name" type="text" autocomplete="=off" autofocus placeholder="First Name"><br>
+        <input name="last_name" type="text" autocomplete="=off"  placeholder="Last Name"><br>
+        <input name="email" type="email" autocomplete="off"  placeholder="Email"><br>
+        <input name="password" id="password" type="password" autocomplete="off" placeholder="Password"><br>
+        <input name="confirm_password" type="password" id="confirm_password" autocomplete="off" placeholder="Verify password"><br>
+        <input name="age" type="text" placeholder="Age">
+        <input name="height" type="text" placeholder="Height(in)">
+        <input name="weight" type="text" placeholder="Weight(lbs)">
+        <input name="sex" type="text" placeholder="M/F">
+        <label>Goal</label>
+        <select name="goal">
+            <option value="goal" disabled=True>Goal</option>
+            <option value="sedentary">Sedentary</option>
+            <option value="lightly_active">Lightly Active</option>
+            <option value="moderately_active">Moderately Active</option>
+            <option value="very_active">Very Active</option>
+            <option value="extremely_active">Extremely Active</option>
+        </select>
+        <label>Activity</label>
+        <select name="activity">
+            <option value="activity" disabled=True>Activity</option>
+            <option value="weight_loss">Weight Loss</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="bulking">Bulking</option>
+        </select>
+        <input type="submit" value="Register">
+    </form>
+
+{% endblock %}
